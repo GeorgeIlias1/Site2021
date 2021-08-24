@@ -37,7 +37,19 @@ let t13 = gsap.timeline ({paused: true});
 
 
 t11.to('#txtReveal', {y: '0%', duration: 0.5, stagger: 0.2});
-t13.to('#txtReveal1', {y: '0%', duration: 0.5, stagger: 0.2});
+
+function responsiveLap(y) {
+  if (y.matches) { // If media query matches
+    t13.to('#txtReveal1', {y: '-20%', duration: 0.5, stagger: 0.2});
+  } else {
+    t13.to('#txtReveal1', {y: '-0%', duration: 0.5, stagger: 0.2});
+  }
+}
+
+var y = window.matchMedia("(max-width: 1440px)");
+responsiveLap(y); // Call listener function at run time
+
+// t13.to('#txtReveal1', {y: '-20%', duration: 0.5, stagger: 0.2});
 
 
 t11.to('.line', {
@@ -47,8 +59,8 @@ t11.to('.line', {
 
 ScrollTrigger.create ({
   trigger: '.paragraphAbout',
-  start: 'bottom 80%',
-  end: '+=700',
+  start: 'bottom 90%',
+  end: '+=800',
   pin: true,
   // toggleActions: 'play none reverse reset',
   onEnter: () => t11.play(),
@@ -156,18 +168,97 @@ gsap.registerPlugin(ScrollTrigger);
 
 const blocks = document.querySelectorAll(".block");
 const blocks1 = document.querySelectorAll(".block01");
-gsap.to(blocks, {
-  xPercent: -140 * (blocks.length - 1),
-  ease: "none",
-  scrollTrigger: {
-  trigger: ".container",
-  pin: true,
-  scrub: true,
-  start: 'top 20%',
-  end: () => "+=20%",
-  // end: () => "+=" + document.querySelector(".container").offsetHeight
+
+function responsiveLaptop(x) {
+  if (x.matches) { // If media query matches
+    gsap.to(blocks, {
+      xPercent: -155 * (blocks.length - 1),
+      ease: "none",
+      scrollTrigger: {
+      trigger: ".container",
+      pin: true,
+      scrub: true,
+      start: 'top 20%',
+      end: () => "+=20%",
+      // end: () => "+=" + document.querySelector(".container").offsetHeight
+      }
+    });
+  } else {
+    gsap.to(blocks, {
+      xPercent: -140 * (blocks.length - 1),
+      ease: "none",
+      scrollTrigger: {
+      trigger: ".container",
+      pin: true,
+      scrub: true,
+      start: 'top 20%',
+      end: () => "+=20%",
+      // end: () => "+=" + document.querySelector(".container").offsetHeight
+      }
+    });
   }
-});
+}
+
+var x = window.matchMedia("(max-width: 1440px)");
+responsiveLaptop(x);
+
+function responsiveLaptop1(e) {
+  if (e.matches) { // If media query matches
+    gsap.to(blocks, {
+      xPercent: -120 * (blocks.length - 1),
+      ease: "none",
+      scrollTrigger: {
+      trigger: ".container",
+      pin: true,
+      scrub: true,
+      start: 'top 30%',
+      end: () => "+=20%",
+      // end: () => "+=" + document.querySelector(".container").offsetHeight
+      }
+    });
+    gsap.to(blocks1, {
+      xPercent: -140 * (blocks1.length - 1),
+      ease: "none",
+      scrollTrigger: {
+      trigger: ".container1",
+      pin: true,
+      scrub: true,
+      start: 'top 20%',
+      end: () => "+=10%",
+      // end: () => "+=" + document.querySelector(".container").offsetWidth
+      }
+    });
+  } else {
+    gsap.to(blocks, {
+      xPercent: -140 * (blocks.length - 1),
+      ease: "none",
+      scrollTrigger: {
+      trigger: ".container",
+      pin: true,
+      scrub: true,
+      start: 'top 20%',
+      end: () => "+=20%",
+      // end: () => "+=" + document.querySelector(".container").offsetHeight
+      }
+    });
+  }
+}
+
+var e = window.matchMedia("(max-width: 1024px)");
+responsiveLaptop1(e);
+
+// gsap.to(blocks, {
+//   xPercent: -140 * (blocks.length - 1),
+//   ease: "none",
+//   scrollTrigger: {
+//   trigger: ".container",
+//   pin: true,
+//   scrub: true,
+//   start: 'top 20%',
+//   end: () => "+=20%",
+//   // end: () => "+=" + document.querySelector(".container").offsetHeight
+//   }
+// });
 
 gsap.to(blocks1, {
   xPercent: -140 * (blocks1.length - 1),
