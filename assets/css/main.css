@@ -61,6 +61,10 @@ section {
   height: 100vh;
 }
 
+#contact {
+  margin-top: 120% !important;
+}
+
 #projects {
   height: 150vh;
 }
@@ -231,7 +235,7 @@ nav ul li a {
 }
 
 .line span {
-  display: inline-block;
+  display: block;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -386,13 +390,9 @@ nav ul li a {
   overflow-y: hidden;
 }
 
-.container1 {
-  width: 90vw !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
+.block-1, .block-3,
+.block-11 {
+  margin-top: 200px !important;
 }
 
 .sub {
@@ -434,11 +434,6 @@ nav ul li a {
   top: 30%;
   margin-right: -30%;
   font-size: 60px;
-}
-
-.block-0,
-.block-10 {
-  margin-right: -100px;
 }
 
 .block-1 {
@@ -502,6 +497,7 @@ nav ul li a {
 }
 
 .container1 {
+  margin-top: 200px;
   margin-left: 100px;
 }
 
@@ -537,6 +533,33 @@ footer {
 footer h4 {
   font-weight: 100;
   font-size: .8vw;
+}
+
+.projectBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.projectBtn .button {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5em;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  padding: 15px 45px;
+}
+
+.projectBtn .button:hover {
+  background: #ffffff;
+  color: #000;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 @media only screen and (max-width: 1440px) {

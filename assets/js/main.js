@@ -135,15 +135,12 @@ let t12 = gsap.timeline ({paused: true});
 
 t12.to('#txtReveal', {y: '0%', duration: 0.5, stagger: 0.2});
 
-t12.to('.line', {
-  duration: 0.5,
-  x: 200
-})
+t12.to('.line', {duration: 0.5, x: '0'});
 
 ScrollTrigger.create ({
-  trigger: '.projectAnim',
+  trigger: '.paragraphAbout',
   start: 'bottom 80%',
-  end: '+=500',
+  end: '+=50',
   pin: true,
   // toggleActions: 'play none reverse reset',
   onEnter: () => t12.play(),
@@ -164,88 +161,88 @@ ScrollTrigger.create ({
 // });
 
 // Hellas Web Projects Scroll
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
-const blocks = document.querySelectorAll(".block");
-const blocks1 = document.querySelectorAll(".block01");
+// const blocks = document.querySelectorAll(".block");
+// const blocks1 = document.querySelectorAll(".block01");
 
-function responsiveLaptop(x) {
-  if (x.matches) { // If media query matches
-    gsap.to(blocks, {
-      xPercent: -155 * (blocks.length - 1),
-      ease: "none",
-      scrollTrigger: {
-      trigger: ".container",
-      pin: true,
-      scrub: true,
-      start: 'top 20%',
-      end: () => "+=20%",
-      // end: () => "+=" + document.querySelector(".container").offsetHeight
-      }
-    });
-  } else {
-    gsap.to(blocks, {
-      xPercent: -140 * (blocks.length - 1),
-      ease: "none",
-      scrollTrigger: {
-      trigger: ".container",
-      pin: true,
-      scrub: true,
-      start: 'top 20%',
-      end: () => "+=20%",
-      // end: () => "+=" + document.querySelector(".container").offsetHeight
-      }
-    });
-  }
-}
+// function responsiveLaptop(x) {
+//   if (x.matches) { // If media query matches
+//     gsap.to(blocks, {
+//       xPercent: -155 * (blocks.length - 1),
+//       ease: "none",
+//       scrollTrigger: {
+//       trigger: ".container",
+//       pin: true,
+//       scrub: true,
+//       start: 'top 20%',
+//       end: () => "+=20%",
+//       // end: () => "+=" + document.querySelector(".container").offsetHeight
+//       }
+//     });
+//   } else {
+//     gsap.to(blocks, {
+//       xPercent: -140 * (blocks.length - 1),
+//       ease: "none",
+//       scrollTrigger: {
+//       trigger: ".container",
+//       pin: true,
+//       scrub: true,
+//       start: 'top 20%',
+//       end: () => "+=20%",
+//       // end: () => "+=" + document.querySelector(".container").offsetHeight
+//       }
+//     });
+//   }
+// }
 
-var x = window.matchMedia("(max-width: 1440px)");
-responsiveLaptop(x);
+// var x = window.matchMedia("(max-width: 1440px)");
+// responsiveLaptop(x);
 
-function responsiveLaptop1(e) {
-  if (e.matches) { // If media query matches
-    gsap.to(blocks, {
-      xPercent: -120 * (blocks.length - 1),
-      ease: "none",
-      scrollTrigger: {
-      trigger: ".container",
-      pin: true,
-      scrub: true,
-      start: 'top 30%',
-      end: () => "+=20%",
-      // end: () => "+=" + document.querySelector(".container").offsetHeight
-      }
-    });
-    gsap.to(blocks1, {
-      xPercent: -140 * (blocks1.length - 1),
-      ease: "none",
-      scrollTrigger: {
-      trigger: ".container1",
-      pin: true,
-      scrub: true,
-      start: 'top 20%',
-      end: () => "+=10%",
-      // end: () => "+=" + document.querySelector(".container").offsetWidth
-      }
-    });
-  } else {
-    gsap.to(blocks, {
-      xPercent: -140 * (blocks.length - 1),
-      ease: "none",
-      scrollTrigger: {
-      trigger: ".container",
-      pin: true,
-      scrub: true,
-      start: 'top 20%',
-      end: () => "+=20%",
-      // end: () => "+=" + document.querySelector(".container").offsetHeight
-      }
-    });
-  }
-}
+// function responsiveLaptop1(e) {
+//   if (e.matches) { // If media query matches
+//     gsap.to(blocks, {
+//       xPercent: -120 * (blocks.length - 1),
+//       ease: "none",
+//       scrollTrigger: {
+//       trigger: ".container",
+//       pin: true,
+//       scrub: true,
+//       start: 'top 30%',
+//       end: () => "+=20%",
+//       // end: () => "+=" + document.querySelector(".container").offsetHeight
+//       }
+//     });
+//     gsap.to(blocks1, {
+//       xPercent: -140 * (blocks1.length - 1),
+//       ease: "none",
+//       scrollTrigger: {
+//       trigger: ".container1",
+//       pin: true,
+//       scrub: true,
+//       start: 'top 20%',
+//       end: () => "+=10%",
+//       // end: () => "+=" + document.querySelector(".container").offsetWidth
+//       }
+//     });
+//   } else {
+//     gsap.to(blocks, {
+//       xPercent: -140 * (blocks.length - 1),
+//       ease: "none",
+//       scrollTrigger: {
+//       trigger: ".container",
+//       pin: true,
+//       scrub: true,
+//       start: 'top 20%',
+//       end: () => "+=20%",
+//       // end: () => "+=" + document.querySelector(".container").offsetHeight
+//       }
+//     });
+//   }
+// }
 
-var e = window.matchMedia("(max-width: 1024px)");
-responsiveLaptop1(e);
+// var e = window.matchMedia("(max-width: 1024px)");
+// responsiveLaptop1(e);
 
 // gsap.to(blocks, {
 //   xPercent: -140 * (blocks.length - 1),
@@ -260,17 +257,17 @@ responsiveLaptop1(e);
 //   }
 // });
 
-gsap.to(blocks1, {
-  xPercent: -140 * (blocks1.length - 1),
-  ease: "none",
-  scrollTrigger: {
-  trigger: ".container1",
-  pin: true,
-  scrub: true,
-  start: 'top 40%',
-  end: () => "+=10%",
-  // end: () => "+=" + document.querySelector(".container").offsetWidth
-  }
-});
+// gsap.to(blocks1, {
+//   xPercent: -140 * (blocks1.length - 1),
+//   ease: "none",
+//   scrollTrigger: {
+//   trigger: ".container1",
+//   pin: true,
+//   scrub: true,
+//   start: 'top 40%',
+//   end: () => "+=10%",
+//   // end: () => "+=" + document.querySelector(".container").offsetWidth
+//   }
+// });
 
 // Skew scroll effect
