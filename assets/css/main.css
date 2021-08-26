@@ -71,6 +71,7 @@ section {
 
 #about {
   padding-top: 5%;
+  margin-bottom: 10%;
 }
 
 .aboutTxt {
@@ -114,6 +115,7 @@ section {
 .contactText {
   text-align: left;
   font-weight: 400;
+  margin-top: -40%;
 }
 
 .projectsTitle {
@@ -156,7 +158,7 @@ section {
 
 .greetings {
   position: relative;
-  top: 60%;
+  top: 65%;
   left: 11.5%;
 }
 
@@ -181,7 +183,6 @@ section {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-top: -6%;
 }
 
 header {
@@ -381,143 +382,318 @@ nav ul li a {
   }
 }
 
-.container {
-  width: 90vw !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
+.whitespace {
+  width: 100%;
+  height: 100px;
 }
 
-.block-1, .block-3,
-.block-11 {
-  margin-top: 200px !important;
+h6 {
+  text-align: center;
 }
 
-.sub {
-  font-size: 20px;
-}
-
-.block {
-  position: relative;
-  width: 580px;
-  height: 460px;
-  margin: 0 300px 20px 80px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-}
-
-.block01 {
-  position: relative;
-  width: 580px;
-  height: 460px;
-  margin: 50px 300px 20px 80px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-}
-
-.block h2 {
+.vertical {
+  margin-top: 40px;
+  border-left: 1px solid #fff;
+  height: 80px;
   position: absolute;
-  font-size: 40px;
+  left: 50%;
 }
 
-.block01 h2 {
-  position: absolute;
-  font-size: 40px;
+.project {
+  height: 500px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 
-.block-0 h2,
-.block-10 h2 {
-  top: 30%;
-  margin-right: -30%;
-  font-size: 60px;
-}
-
-.block-1 {
-  background: url("/images/ProjectsHellasWeb/Kourkouta.png") no-repeat 50% 50%;
+.project1 {
+  background: url(/images/ProjectsHellasWeb/Kourkouta.png) no-repeat 50% 50%;
   background-size: cover;
 }
 
-.block-2 {
-  background: url("/images/ProjectsHellasWeb/LeCharme.png") no-repeat 50% 50%;
-  background-size: cover;
-}
-
-.block-3 {
-  background: url("/images/ProjectsHellasWeb/Tsikrikou.png") no-repeat 50% 50%;
-  background-size: cover;
-}
-
-.block-4 {
-  background: url("/images/ProjectsHellasWeb/Renata.png") no-repeat 50% 50%;
-  background-size: cover;
-}
-
-.block-5 {
-  background: url("/images/ProjectsHellasWeb/Fosteri.png") no-repeat 50% 50%;
-  background-size: cover;
-}
-
-.block-6 {
-  background: url("/images/ProjectsHellasWeb/Kandylis.png") no-repeat 50% 50%;
-  background-size: cover;
-}
-
-.block-7 {
-  background: url("/images/ProjectsHellasWeb/Alexopoulos.png") no-repeat 50% 50%;
-  background-size: cover;
-}
-
-.block-8 {
-  background: url("/images/ProjectsHellasWeb/Barbarossa.png") no-repeat 50% 50%;
-  background-size: cover;
-}
-
-.block-9 {
-  background: url("/images/ProjectsHellasWeb/Paouleskou.png") no-repeat 50% 50%;
-  background-size: cover;
-}
-
-.block-11 {
-  background: url("/images/ProjectsHellasWeb/Mousiko.png") no-repeat 50% 50%;
-  background-size: cover;
-}
-
-.block-12 {
-  background: url("/images/ProjectsHellasWeb/PizzaSquare.png") no-repeat 50% 50%;
-  background-size: cover;
-}
-
-.container {
-  margin-top: 200px;
-  margin-left: 100px;
-}
-
-.container1 {
-  margin-top: 200px;
-  margin-left: 100px;
-}
-
-.block-1 h2,
-.block-3 h2,
-.block-5 h2,
-.block-7 h2,
-.block-9 h2,
-.block-11 h2,
-.block-13 h2 {
+.project1::after {
+  content: "kourkouta dentist.";
+  font-size: 35px;
+  position: relative;
+  color: #ffffff;
+  display: block;
+  top: 8%;
+  left: -60%;
+  right: 0;
   bottom: 0;
-  right: -60px;
 }
 
-.block-2 h2,
-.block-4 h2,
-.block-6 h2,
-.block-8 h2,
-.block-12 h2 {
-  right: -60px;
+.project2 {
+  background: url(/images/ProjectsHellasWeb/LeCharme.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project2::after {
+  content: "lecharme e-shop.";
+  font-size: 35px;
+  position: relative;
+  color: #ffffff;
+  display: block;
+  top: 80%;
+  left: 90%;
+  right: 0;
+  bottom: 0;
+}
+
+.project3 {
+  background: url(/images/ProjectsHellasWeb/Tsikrikou.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project3::after {
+  content: "tsikrikou dentist.";
+  font-size: 35px;
+  position: relative;
+  color: #ffffff;
+  display: block;
+  top: 80%;
+  left: -50%;
+  right: 0;
+  bottom: 3;
+}
+
+.project4 {
+  background: url(/images/ProjectsHellasWeb/PizzaSquare.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project4::after {
+  content: "pizza square menu.";
+  font-size: 35px;
+  position: relative;
+  color: #ffffff;
+  display: block;
+  top: 10%;
+  left: 90%;
+  right: 0;
+  bottom: 3;
+}
+
+@media (max-width: 768px) {
+  .project {
+    width: 90% !important;
+    margin: 14px auto;
+  }
+  .project1::after, .project2::after, .project3::after, .project4::after, .project5::after, .project6::after, .project7::after, .project8::after, .project9::after, .project10::after, .project11::after {
+    display: none;
+  }
+}
+
+.container {
+  margin-top: 10%;
+}
+
+.hero-content {
+  margin-left: 0%;
+}
+
+.hero-content p {
+  font-weight: 300;
+  line-height: 36px;
+  color: grey;
+}
+
+.hero-content h6 {
+  text-align: left;
+}
+
+h4 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.project1 {
+  background: url(/images/ProjectsHellasWeb/Kourkouta.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project1::after {
+  content: "kourkouta dentist.";
+  font-size: 35px;
+  position: relative;
+  color: #ffffff;
+  display: block;
+  top: 8%;
+  left: -60%;
+  right: 0;
+  bottom: 0;
+}
+
+.project2 {
+  background: url(/images/ProjectsHellasWeb/LeCharme.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project2::after {
+  content: "lecharme e-shop.";
+  font-size: 35px;
+  position: relative;
+  color: #ffffff;
+  display: block;
+  top: 80%;
+  left: 90%;
+  right: 0;
+  bottom: 0;
+}
+
+.project3 {
+  background: url(/images/ProjectsHellasWeb/Tsikrikou.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project3::after {
+  content: "tsikrikou dentist.";
+  font-size: 35px;
+  position: relative;
+  color: #ffffff;
+  display: block;
+  top: 80%;
+  left: -50%;
+  right: 0;
+  bottom: 3;
+}
+
+.project5 {
+  background: url(/images/ProjectsHellasWeb/Barbarossa.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project5::after {
+  content: "barbarossa e-shop.";
+  font-size: 35px;
+  position: relative;
+  color: #ffffff;
+  display: block;
+  top: 10%;
+  left: 90%;
+  right: 0;
+  bottom: 3;
+}
+
+.project6 {
+  background: url(/images/ProjectsHellasWeb/Alexopoulos.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project6::after {
+  content: "alexopoulos dentist.";
+  font-size: 35px;
+  position: relative;
+  color: #ffffff;
+  display: block;
+  top: 8%;
+  left: -60%;
+  right: 0;
+  bottom: 0;
+}
+
+.project7 {
+  background: url(/images/ProjectsHellasWeb/Renata.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project7::after {
+  content: "renata e-shop.";
+  font-size: 35px;
+  position: relative;
+  color: #ffffff;
+  display: block;
+  top: 80%;
+  left: 90%;
+  right: 0;
+  bottom: 0;
+}
+
+.project8 {
+  background: url(/images/ProjectsHellasWeb/Fosteri.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project8::after {
+  content: "fosteri dentist.";
+  font-size: 35px;
+  position: relative;
+  color: #ffffff;
+  display: block;
+  top: 80%;
+  left: -50%;
+  right: 0;
+  bottom: 3;
+}
+
+.project9 {
+  background: url(/images/ProjectsHellasWeb/Kandylis.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project9::after {
+  content: "kandylis e-shop.";
+  font-size: 35px;
+  position: relative;
+  color: #ffffff;
+  display: block;
+  top: 10%;
+  left: 90%;
+  right: 0;
+  bottom: 3;
+}
+
+.project10 {
+  background: url(/images/ProjectsHellasWeb/Paouleskou.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project10::after {
+  content: "paouleskou dentist.";
+  font-size: 35px;
+  position: relative;
+  color: #ffffff;
+  display: block;
+  top: 8%;
+  left: -60%;
+  right: 0;
+  bottom: 0;
+}
+
+.project11 {
+  background: url(/images/ProjectsHellasWeb/Mousiko.png) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project11::after {
+  content: "Mousiko Spartis.";
+  font-size: 35px;
+  position: relative;
+  color: #ffffff;
+  display: block;
+  top: 8%;
+  left: -60%;
+  right: 0;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding-top: 50px;
+    margin: 0 auto;
+  }
+  .container {
+    margin-top: 20%;
+  }
+}
+
+.about {
+  height: 500px;
+  margin-top: 120px;
+}
+
+.image {
+  background: url(/images/Untitled-1.png) no-repeat 50% 50%;
+  background-size: cover;
 }
 
 footer {
@@ -560,69 +736,5 @@ footer h4 {
   color: #000;
   -webkit-transition: 1s ease;
   transition: 1s ease;
-}
-
-@media only screen and (max-width: 1440px) {
-  .titleTxt {
-    margin-top: 40vh;
-  }
-  h1 {
-    font-size: 5vw;
-  }
-  .infoTxt {
-    font-size: 2vw;
-  }
-  .wrap-info svg {
-    width: 7vw;
-    height: 7vw;
-  }
-  .greetings {
-    position: relative;
-    top: 54%;
-    left: 10.5%;
-  }
-  .paragraphAbout {
-    position: relative;
-    top: 10%;
-  }
-  .line1 {
-    height: 150px;
-  }
-  .line1 span#txtReveal1 {
-    font-size: 8vw;
-    line-height: 2.5;
-  }
-  footer h4 {
-    font-weight: 100;
-    font-size: 1.5vw;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .titleTxt {
-    margin-top: 45vh;
-  }
-  h1 {
-    font-size: 6vw;
-  }
-  .infoTxt {
-    font-size: 2.3vw;
-  }
-  .greetings {
-    position: relative;
-    top: 54%;
-    left: 9%;
-  }
-  .line1 {
-    height: 120px;
-  }
-  .line1 span#txtReveal1 {
-    font-size: 10vw;
-    line-height: 1.5;
-  }
-  footer h4 {
-    font-weight: 100;
-    font-size: 3vw;
-  }
 }
 /*# sourceMappingURL=main.css.map */

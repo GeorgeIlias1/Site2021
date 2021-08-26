@@ -7,14 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Links -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">  
   <link rel="stylesheet" href="/assets/css/main.css">
   <link href="https://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="icon" href="/images/faviconDark.png?light" media="(prefers-color-scheme:no-preference)">
   <link rel="icon" href="/images/faviconLight.png?dark"  media="(prefers-color-scheme:dark)">
   <link rel="icon" href="/images/faviconDark.png?light" media="(prefers-color-scheme:light)">
+  <link rel="stylesheet" href="/assets/css/animate.css">
                 
-  <title>George Ilias - Web Dev 🤘</title>
+  <title>George Ilias | Web Dev 🤘</title>
 </head>
 <body>
 
@@ -23,13 +25,13 @@
   <!-- Navigation -->
   <header>
     <div class="menu">
-      <nav class="main-menu">
-       <ul>
-         <li class="clickable link"><a href="#about">about</a></li>
-         <li class="clickable link"><a href="#projects">projects</a></li>
-         <li class="clickable link"><a href="mailto:contact@georgeilias.dev">contact</a></li>
-       </ul>
-      </nav>
+     <nav class="main-menu">
+      <ul>
+        <li class="clickable link"><a href="about.html">about.</a></li>
+        <li class="clickable link"><a href="work.html">work.</a></li>
+        <li class="clickable link"><a href="mailto:contact@georgeilias.dev">contact.</a></li>
+      </ul>
+     </nav>
     </div>
   </header>
 
@@ -37,27 +39,33 @@
     <div id="movie-bg"></div>
     <!-- Fist Page  -->
    <section id="home">
-     <h1 class="titleTxt" data-aos="zoom-out" data-aos-duration="1000">HELLO</h1>
+     <div class="row">
+      <div class="col-lg-12">
+        <h1 class="titleTxt" data-aos="zoom-out" data-aos-duration="1000">HELLO</h1>
+      </div>
+     </div>
+
      <div class="greetings" data-aos="fade-up" data-aos-duration="1000">
        <div class="wrap-text">
-        <h1>
-         <span class="titleSpan data">I am George</span>
-        </h1>
-        <div class="wrap-info">
-          <svg width="53px" height="53px" viewBox="0 0 53 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="arrow-wrap" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="arrow" transform="translate(-904.000000, -343.000000)" stroke="#fc5151" stroke-width="2">
-                    <path d="M912.545285,345 L946.743,379.198 L946.74357,345.246688 L956,345.246688 L956,395 L906.246688,395 L906.246688,385.74357 L940.198,385.743 L906,351.545285 L912.545285,345 Z" id="wrap-arrow1a"></path>
-                </g>
-            </g>
-          </svg>
-          <h2 class="infoTxt"><span class="titleSpan">Developer</span><span class="titleSpan">UI / UX Designer</span><span class="titleSpan">Freelance</span></h2>
-        </div>
+         <h1>
+          <span class="titleSpan data">I am George</span>
+         </h1>
+         <div class="wrap-info">
+           <svg width="53px" height="53px" viewBox="0 0 53 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+             <g id="arrow-wrap" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                 <g id="arrow" transform="translate(-904.000000, -343.000000)" stroke="#fc5151" stroke-width="2">
+                     <path d="M912.545285,345 L946.743,379.198 L946.74357,345.246688 L956,345.246688 L956,395 L906.246688,395 L906.246688,385.74357 L940.198,385.743 L906,351.545285 L912.545285,345 Z" id="wrap-arrow1a"></path>
+                 </g>
+             </g>
+           </svg>
+           <h2 class="infoTxt"><span class="titleSpan">Developer</span><span class="titleSpan">UI / UX Designer</span><span class="titleSpan">Freelance</span></h2>
+         </div>
        </div>
      </div>
+    
     </section>
 
-    <section id="about">
+    <!-- <section id="about">
      <h1 class="titleTxt" data-aos="zoom-out" data-aos-duration="1000">ABOUT</h1> 
      
      <div class="paragraphAbout">
@@ -81,51 +89,63 @@
         </div>
      </div>
      
-    </section>
+    </section> -->
 
     <section id="projects">
-      <h1 class="projectsTitle" data-aos="zoom-out" data-aos-duration="1000">PROJECTS</h1>
+      <!-- <h1 class="projectsTitle" data-aos="zoom-out" data-aos-duration="1000">PROJECTS</h1> -->
 
-      <div class="container">
-        <div class="block block-0">
-          <h2>Hellas Web <br> <span class="sub">Scroll to see more &rarr;</span></h2>
-        </div>
+      <div class="container-fluid">
+        <br><br><br>
 
-        <div class="block block-1">
-          <h2>Kourkouta </br> Dentist</h2>
-        </div>
-      </div>
-      <div class="container">
-        <div class="block block-2">
-          <h2>LeCharme </br> E-Shop</h2>
-        </div>
+        <h6 class="wow fadeInUp" data-wow-delay="0.1s">Selected projects</h6>
+         <div class="vertical wow fadeInUp" data-wow-delay="0.2s"></div>
+        <br>
 
-        <div class="block block-3">
-          <h2>Tsikrikou </br> Dentist</h2>
-        </div>
-      </div>
-      <div class="projectBtn"><a class="button" href="#">View More</a></div>
+        <div class="whitespace"></div>
+        <div class="whitespace"></div>
 
-      <div class="container">
-        <div class="block block-10">
-          <h2>Freelance <br> <span class="sub">Scroll to see more &rarr;</span></h2>
+        <div class="row">
+          <div class="col-lg-8"></div>
+
+          <div class="col-lg-4 project project1 wow fadeInUp" onclick="location.href='project.html'"></div>
         </div>
 
-        <div class="block block-11">
-          <h2>Musical School </br> of Sparta</h2>
+        <div class="whitespace"></div>
+
+        <div class="row">
+          <div class="col-lg-6 project project2 wow fadeInUp" onclick="location.href='project.html'"></div>
+
+          <div class="col-lg-6"></div>
         </div>
-      </div>
-      <div class="container">
-        <div class="block block-12">
-          <h2>Pizza Square </br> Menu</h2>
+
+        <div class="whitespace"></div>
+
+        <div class="row">
+          <div class="col-lg-7"></div>
+
+          <div class="col-lg-4 project project3 wow fadeInUp" onclick="location.href='project.html'"></div>
+
+          <div class="col-lg-1"></div>
         </div>
+
+        <div class="whitespace"></div>
+
+        <div class="row">
+          <div class="col-lg-1"></div>
+
+          <div class="col-lg-5 project project4 wow fadeInUp" onclick="location.href='project.html'"></div>
+
+          <div class="col-lg-6"></div> 
+        </div>
+
+        <div class="whitespace"></div>
       </div>
     </section>
 
     <section id="contact">
       <!-- <h2 class="contactText" data-aos="zoom-out" data-aos-duration="1000">I'm always <br>intersted in<br>creating cool<br> experiences.<br> Are you<br> minding a <br>project? <br>Let's talk.</h2> -->
-
-      <div class="contactText">
+      
+      <div class="contactText col-">
         <div class="line1">
          <span id="txtReveal1">I’m always</span>
         </div>
@@ -150,6 +170,7 @@
          <div class="line1">
           <span id="txtReveal1"><a href="mailto:contact@georgeilias.dev" style="color: #fc5151; text-decoration: none;">Let's talk.</a></span>
          </div>
+      </div>
     </section>
     <footer>
       <h4 class="footerText">&copy; 2021 George Ilias | Web Dev</h4>
@@ -164,9 +185,12 @@
 <script src="https://cdn.jsdelivr.net/npm/greensock@1.20.2/dist/TweenMax.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="/assets/js/wow.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 <script src="/assets/js/main.js"></script>
 <script>
   AOS.init();
+  new WOW().init();
 </script>
 </body>
 </html>

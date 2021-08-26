@@ -66,6 +66,7 @@ section
 
 #about 
   padding-top: 5%
+  margin-bottom: 10%
   
 
 .aboutTxt 
@@ -98,6 +99,7 @@ section
 .contactText 
   text-align: left
   font-weight: 400
+  margin-top: -40%
 
 .projectsTitle
   -webkit-text-fill-color: rgba(0, 0, 0, 0)
@@ -129,7 +131,7 @@ section
 
 .greetings 
   position: relative
-  top: 60%
+  top: 65%
   left: 11.5%
 
 .titleSpan
@@ -146,7 +148,6 @@ section
   flex-wrap: wrap
   width: 100%
   justify-content: flex-end
-  margin-top: -6%
 
 header 
   position: fixed
@@ -274,140 +275,304 @@ nav
    transform: translate(5%, 0)
 
 // Projects Section
-.container 
-  width: 90vw !important
-  display: flex
-  // flex-flow: row
-  overflow-x: scroll
-  overflow-y: hidden
+// .container-fluid 
+//   margin-top: 10%
 
-.block-1, .block-3,
-.block-11
-  margin-top: 200px !important
+.whitespace
+  width: 100%
+  height: 100px
+
+h6 
+  text-align: center
+
+.vertical
+  margin-top: 40px
+  border-left: 1px solid #fff
+  height: 80px
+  position: absolute
+  left: 50%
+
+
+.project
+  height: 500px
+  filter: grayscale(1)
+
+.project1
+  background: url(/images/ProjectsHellasWeb/Kourkouta.png) no-repeat 50% 50%
+  background-size: cover 
+
+.project1
+  &::after
+    content: "kourkouta dentist."
+    font-size: 35px
+    position: relative
+    color: $text-color
+    display: block
+    top: 8%
+    left: -60%
+    right: 0
+    bottom: 0
+
+.project2
+  background: url(/images/ProjectsHellasWeb/LeCharme.png) no-repeat 50% 50%
+  background-size: cover 
+
+.project2
+  &::after
+    content: "lecharme e-shop."
+    font-size: 35px
+    position: relative
+    color: $text-color
+    display: block
+    top: 80%
+    left: 90%
+    right: 0
+    bottom: 0
+
+.project3
+  background: url(/images/ProjectsHellasWeb/Tsikrikou.png) no-repeat 50% 50%
+  background-size: cover 
+
+.project3
+  &::after
+    content: "tsikrikou dentist."
+    font-size: 35px
+    position: relative
+    color: $text-color
+    display: block
+    top: 80%
+    left: -50%
+    right: 0
+    bottom: 3
+
+.project4
+  background: url(/images/ProjectsHellasWeb/PizzaSquare.png) no-repeat 50% 50%
+  background-size: cover 
+
+.project4
+  &::after
+    content: "pizza square menu."
+    font-size: 35px
+    position: relative
+    color: $text-color
+    display: block
+    top: 10%
+    left: 90%
+    right: 0
+    bottom: 3
+
+// Projects Media Queries
+@media (max-width: 768px) 
+  .project
+    width: 90% !important
+    margin: 14px auto
+
+  .project1, .project2, .project3, .project4, .project5, .project6, .project7, .project8, .project9, .project10, .project11
+    &::after
+      display: none
+      
     
+// Work page
+.container
+  margin-top: 10%
 
-// .container1
-//   width: 90vw !important
-//   display: flex
-//   // flex-flow: row
-//   overflow-x: scroll
-//   overflow-y: hidden
-  
-.sub
-  font-size: 20px
+.hero-content
+  margin-left: 0%
 
-.block 
-  position: relative
-  width: 580px 
-  height: 460px 
-  margin: 0 300px 20px 80px
-  flex: 0 0 auto
+.hero-content p 
+  font-weight: 300
+  line-height: 36px
+  color: grey
 
-.block01
-  position: relative
-  width: 580px 
-  height: 460px 
-  margin: 50px 300px 20px 80px
-  flex: 0 0 auto
+.hero-content h6 
+  text-align: left
 
-
-.block h2 
-  position: absolute
+h4 
   font-size: 40px
-  // -webkit-text-fill-color: #000
-  // -webkit-text-stroke: 2px $text-color
+  text-align: center
 
-.block01 h2 
-  position: absolute
-  font-size: 40px
-  // -webkit-text-fill-color: #000
-  // -webkit-text-stroke: 2px $text-color
+.project1
+  background: url(/images/ProjectsHellasWeb/Kourkouta.png) no-repeat 50% 50%
+  background-size: cover 
 
-.block-0 h2,
-.block-10 h2  
-  top: 30%
-  margin-right: -30%
-  font-size: 60px
+.project1
+  &::after
+    content: "kourkouta dentist."
+    font-size: 35px
+    position: relative
+    color: $text-color
+    display: block
+    top: 8%
+    left: -60%
+    right: 0
+    bottom: 0
 
-// .block-0,
-// .block-10
-//   margin-right: -100px
+.project2
+  background: url(/images/ProjectsHellasWeb/LeCharme.png) no-repeat 50% 50%
+  background-size: cover 
 
-.block-1 
-  &:hover
-  background: url('/images/ProjectsHellasWeb/Kourkouta.png') no-repeat 50% 50%
+.project2
+  &::after
+    content: "lecharme e-shop."
+    font-size: 35px
+    position: relative
+    color: $text-color
+    display: block
+    top: 80%
+    left: 90%
+    right: 0
+    bottom: 0
+
+.project3
+  background: url(/images/ProjectsHellasWeb/Tsikrikou.png) no-repeat 50% 50%
+  background-size: cover 
+
+.project3
+  &::after
+    content: "tsikrikou dentist."
+    font-size: 35px
+    position: relative
+    color: $text-color
+    display: block
+    top: 80%
+    left: -50%
+    right: 0
+    bottom: 3
+
+.project5
+  background: url(/images/ProjectsHellasWeb/Barbarossa.png) no-repeat 50% 50%
+  background-size: cover 
+
+.project5
+  &::after
+    content: "barbarossa e-shop."
+    font-size: 35px
+    position: relative
+    color: $text-color
+    display: block
+    top: 10%
+    left: 90%
+    right: 0
+    bottom: 3
+
+.project6
+  background: url(/images/ProjectsHellasWeb/Alexopoulos.png) no-repeat 50% 50%
+  background-size: cover 
+
+.project6
+  &::after
+    content: "alexopoulos dentist."
+    font-size: 35px
+    position: relative
+    color: $text-color
+    display: block
+    top: 8%
+    left: -60%
+    right: 0
+    bottom: 0
+
+.project7
+  background: url(/images/ProjectsHellasWeb/Renata.png) no-repeat 50% 50%
+  background-size: cover 
+
+.project7
+  &::after
+    content: "renata e-shop."
+    font-size: 35px
+    position: relative
+    color: $text-color
+    display: block
+    top: 80%
+    left: 90%
+    right: 0
+    bottom: 0
+
+.project8
+  background: url(/images/ProjectsHellasWeb/Fosteri.png) no-repeat 50% 50%
+  background-size: cover 
+
+.project8
+  &::after
+    content: "fosteri dentist."
+    font-size: 35px
+    position: relative
+    color: $text-color
+    display: block
+    top: 80%
+    left: -50%
+    right: 0
+    bottom: 3
+
+.project9
+  background: url(/images/ProjectsHellasWeb/Kandylis.png) no-repeat 50% 50%
+  background-size: cover 
+
+.project9
+  &::after
+    content: "kandylis e-shop."
+    font-size: 35px
+    position: relative
+    color: $text-color
+    display: block
+    top: 10%
+    left: 90%
+    right: 0
+    bottom: 3
+
+.project10
+  background: url(/images/ProjectsHellasWeb/Paouleskou.png) no-repeat 50% 50%
+  background-size: cover 
+
+.project10
+  &::after
+    content: "paouleskou dentist."
+    font-size: 35px
+    position: relative
+    color: $text-color
+    display: block
+    top: 8%
+    left: -60%
+    right: 0
+    bottom: 0
+
+.project11
+  background: url(/images/ProjectsHellasWeb/Mousiko.png) no-repeat 50% 50%
+  background-size: cover 
+
+.project11
+  &::after
+    content: "Mousiko Spartis."
+    font-size: 35px
+    position: relative
+    color: $text-color
+    display: block
+    top: 8%
+    left: -60%
+    right: 0
+    bottom: 0
+
+
+
+@media (max-width: 768px)
+  .hero-content
+    padding-top: 50px
+    margin: 0 auto
+
+  .container
+   margin-top: 20%
+
+
+// About page
+
+.about
+  height: 500px
+  margin-top: 120px
+
+.image
+  background: url(/images/Untitled-1.png) no-repeat 50% 50%
   background-size: cover
 
-.block-2
-  background: url('/images/ProjectsHellasWeb/LeCharme.png') no-repeat 50% 50%
-  background-size: cover
-
-.block-3
-  background: url('/images/ProjectsHellasWeb/Tsikrikou.png') no-repeat 50% 50%
-  background-size: cover
-
-.block-4
-  background: url('/images/ProjectsHellasWeb/Renata.png') no-repeat 50% 50%
-  background-size: cover
-
-.block-5
-  background: url('/images/ProjectsHellasWeb/Fosteri.png') no-repeat 50% 50%
-  background-size: cover
-
-.block-6
-  background: url('/images/ProjectsHellasWeb/Kandylis.png') no-repeat 50% 50%
-  background-size: cover
-
-.block-7
-  background: url('/images/ProjectsHellasWeb/Alexopoulos.png') no-repeat 50% 50%
-  background-size: cover
-
-.block-8
-  background: url('/images/ProjectsHellasWeb/Barbarossa.png') no-repeat 50% 50%
-  background-size: cover
-
-.block-9
-  background: url('/images/ProjectsHellasWeb/Paouleskou.png') no-repeat 50% 50%
-  background-size: cover
-
-.block-11
-  background: url('/images/ProjectsHellasWeb/Mousiko.png') no-repeat 50% 50%
-  background-size: cover
-
-.block-12
-  background: url('/images/ProjectsHellasWeb/PizzaSquare.png') no-repeat 50% 50%
-  background-size: cover
-
-// .block-13
-//   background: url('/images/ProjectsHellasWeb/Angelica.png') no-repeat 50% 50%
-//   background-size: cover
-
-.container 
-  margin-top: 200px
-  margin-left: 100px
-
-.container1
-  margin-top: 200px
-  margin-left: 100px
-
-.block-1 h2,
-.block-3 h2,
-.block-5 h2,
-.block-7 h2,
-.block-9 h2,
-.block-11 h2,
-.block-13 h2
-  bottom: 0
-  right: -60px
-
-.block-2 h2,
-.block-4 h2,
-.block-6 h2,
-.block-8 h2,
-.block-12 h2
-  right: -60px
-
-
+  // Footer
 footer
   display: flex
   justify-content: center
@@ -440,74 +605,74 @@ footer
 
 // Laptop 1440px
 
-@media only screen and (max-width: 1440px) 
-  .titleTxt 
-    margin-top: 40vh
+// @media only screen and (max-width: 1440px) 
+//   .titleTxt 
+//     margin-top: 40vh
 
-  h1 
-    font-size: 5vw
+//   h1 
+//     font-size: 5vw
 
-  .infoTxt
-    font-size: 2vw
+//   .infoTxt
+//     font-size: 2vw
 
-  .wrap-info svg 
-    width: 7vw
-    height: 7vw
+//   .wrap-info svg 
+//     width: 7vw
+//     height: 7vw
 
-  .greetings 
-    position: relative
-    top: 54%
-    left: 10.5%
+//   .greetings 
+//     position: relative
+//     top: 54%
+//     left: 10.5%
 
-  .paragraphAbout
-    position: relative
-    top: 10%
+//   .paragraphAbout
+//     position: relative
+//     top: 10%
 
-  .line1
-   height: 150px 
-   span#txtReveal1
-    font-size: 8vw 
-    line-height: 2.5 
+//   .line1
+//    height: 150px 
+//    span#txtReveal1
+//     font-size: 8vw 
+//     line-height: 2.5 
 
-  footer h4 
-    font-weight: 100
-    font-size: 1.5vw
+//   footer h4 
+//     font-weight: 100
+//     font-size: 1.5vw
 
 
-// Laptop 1024px
+// // Laptop 1024px
 
-// Laptop 1440px
+// // Laptop 1440px
 
-@media only screen and (max-width: 1024px) 
-  .titleTxt 
-    margin-top: 45vh
+// @media only screen and (max-width: 1024px) 
+//   .titleTxt 
+//     margin-top: 45vh
 
-  h1 
-    font-size: 6vw
+//   h1 
+//     font-size: 6vw
 
-  .infoTxt
-    font-size: 2.3vw
+//   .infoTxt
+//     font-size: 2.3vw
 
-  // .wrap-info svg 
-  //   width: 7vw
-  //   height: 7vw
+//   // .wrap-info svg 
+//   //   width: 7vw
+//   //   height: 7vw
 
-  .greetings 
-    position: relative
-    top: 54%
-    left: 9%
+//   .greetings 
+//     position: relative
+//     top: 54%
+//     left: 9%
 
-  // .paragraphAbout
-  //   position: relative
-  //   top: 10%
+//   // .paragraphAbout
+//   //   position: relative
+//   //   top: 10%
 
-  .line1
-   height: 120px 
-   span#txtReveal1
-    font-size: 10vw 
-    line-height: 1.5 
+//   .line1
+//    height: 120px 
+//    span#txtReveal1
+//     font-size: 10vw 
+//     line-height: 1.5 
 
-  footer h4 
-    font-weight: 100
-    font-size: 3vw
+//   footer h4 
+//     font-weight: 100
+//     font-size: 3vw
 
