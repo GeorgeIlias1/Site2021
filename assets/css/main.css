@@ -819,15 +819,99 @@ h4 {
   line-height: 8rem !important;
 }
 
+.prev, .next p {
+  color: grey;
+}
+
+.prev p {
+  text-align: left;
+}
+
+.lastSection {
+  margin-bottom: 10%;
+}
+
+@media (max-width: 1440px) {
+  .lastSection {
+    margin-top: 20% !important;
+  }
+  footer h4 {
+    font-size: 1vw !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  footer h4 {
+    font-size: 1.2vw !important;
+  }
+  .lastSection {
+    margin-top: 40% !important;
+  }
+  .wrapper .line {
+    height: 80px !important;
+  }
+  .wrapper .line span {
+    line-height: 5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    margin-top: 90vh !important;
+  }
+  footer h4 {
+    font-size: 1.5vw !important;
+  }
+  .lastSection {
+    margin-top: 100% !important;
+  }
+  .wrapper .line {
+    height: 110px !important;
+  }
+  .wrapper .line span {
+    line-height: 3rem !important;
+    font-size: 7vw !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  footer {
+    margin-top: 80vh !important;
+  }
+  footer h4 {
+    font-size: 2.5vw !important;
+  }
+  .lastSection {
+    margin-top: 160% !important;
+  }
+  .wrapper .line {
+    height: 70px !important;
+  }
+  .wrapper .line span {
+    font-size: 8.5vw !important;
+  }
+}
+
+@media (max-width: 425px) {
+  footer {
+    margin-top: 50vh !important;
+  }
+  footer h4 {
+    font-size: 3vw !important;
+  }
+  .lastSection {
+    margin-top: 200% !important;
+  }
+  .wrapper .line {
+    height: 50px !important;
+  }
+  .wrapper .line span {
+    font-size: 9vw !important;
+  }
+}
+
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  margin-top: 10%;
+  margin-top: 50vh;
 }
 
 footer h4 {
