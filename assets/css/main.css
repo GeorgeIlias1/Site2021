@@ -5,7 +5,7 @@ body {
           box-sizing: border-box;
   font-family: "Monument Extended", sans-serif;
   color: #ffffff;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 ::-webkit-scrollbar {
@@ -47,6 +47,166 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.1);
+}
+
+nav {
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(22, 22, 22, 0)));
+  background: linear-gradient(180deg, #000, rgba(22, 22, 22, 0));
+  -webkit-transition: .6s ease-in;
+  transition: .6s ease-in;
+  height: 80px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+
+nav #brand {
+  float: left;
+  margin-top: 2em;
+  display: block;
+  margin-left: 82px;
+  line-height: 80px;
+  font-weight: bold;
+}
+
+nav #brand a {
+  color: #fff;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+}
+
+nav #menu {
+  float: left;
+  right: 80px;
+  top: 2em;
+  position: fixed;
+}
+
+nav #menu li {
+  padding-left: 40px;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 300;
+  line-height: 80px;
+  position: relative;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+nav #menu li span {
+  font-weight: 700;
+}
+
+nav #menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#toggle {
+  position: absolute;
+  right: 6em;
+  top: 2em;
+  font-weight: 300;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  float: right;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.close-btn {
+  position: absolute;
+  right: 16px;
+  font-weight: 300;
+  z-index: 2;
+  cursor: pointer;
+  top: -2px;
+  line-height: 80px;
+}
+
+#resize {
+  z-index: 1;
+  top: 0px;
+  position: fixed;
+  background: #0f0f0f;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+#resize #menu {
+  height: 90px;
+  position: absolute;
+  left: 45%;
+  -webkit-transform: translateX(-40%);
+          transform: translateX(-40%);
+  text-align: center;
+  display: table-cell;
+  vertical-align: center;
+}
+
+#resize #menu li {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 50px;
+  min-height: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+#resize li:nth-child(1) {
+  margin-top: 140px;
+}
+
+#resize #menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#resize.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  #toggle {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 6px;
+    margin-right: 4px;
+  }
+  nav #brand {
+    margin-left: 24px;
+    margin-top: 0.6em;
+  }
+  #menu a {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  #resize li span {
+    font-weight: bolder;
+  }
+  nav #menu {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #resize {
+    visibility: hidden !important;
+  }
 }
 
 h1 {
@@ -183,49 +343,6 @@ section {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-}
-
-header {
-  position: fixed;
-  top: 5em;
-  left: 0;
-  right: 0;
-  z-index: 11;
-  height: 65px;
-  -webkit-transform: translateY(-80px);
-  transform: translateY(-80px);
-  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(22, 22, 22, 0)));
-  background: linear-gradient(180deg, #000, rgba(22, 22, 22, 0));
-  -webkit-transition: .6s ease-in;
-  transition: .6s ease-in;
-}
-
-.menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  position: relative;
-  z-index: 9;
-}
-
-nav {
-  margin: 3em 2em 0 0;
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 0 15px;
 }
 
 .line {
@@ -479,7 +596,7 @@ h6 {
     margin: 14px auto;
   }
   .project1::after, .project2::after, .project3::after, .project4::after, .project5::after, .project6::after, .project7::after, .project8::after, .project9::after, .project10::after, .project11::after {
-    display: none;
+    display: none !important;
   }
 }
 

@@ -31,12 +31,12 @@ const text = baffle(".data");
 
 //Text Reveal 
 // let t11 = gsap.timeline ({defaults: {ease: 'SlowMo.easeOut'}});
-let t11 = gsap.timeline ({paused: true});
+// let t11 = gsap.timeline ({paused: true});
 let t13 = gsap.timeline ({paused: true});
 
 
 
-t11.to('#txtReveal', {y: '0%', duration: 0.5, stagger: 0.2});
+// t11.to('#txtReveal', {y: '0%', duration: 0.5, stagger: 0.2});
 
 function responsiveLap(y) {
   if (y.matches) { // If media query matches
@@ -52,20 +52,20 @@ responsiveLap(y); // Call listener function at run time
 // t13.to('#txtReveal1', {y: '-20%', duration: 0.5, stagger: 0.2});
 
 
-t11.to('.line', {
-  duration: 0.5,
-  x: 200
-})
+// t11.to('.line', {
+//   duration: 0.5,
+//   x: 200
+// })
 
-ScrollTrigger.create ({
-  trigger: '.paragraphAbout',
-  start: 'bottom 90%',
-  end: '+=800',
-  pin: true,
-  // toggleActions: 'play none reverse reset',
-  onEnter: () => t11.play(),
-  onLeaveBack: () => t11.reverse()
-})
+// ScrollTrigger.create ({
+//   trigger: '.paragraphAbout',
+//   start: 'bottom 90%',
+//   end: '+=800',
+//   pin: true,
+//   // toggleActions: 'play none reverse reset',
+//   onEnter: () => t11.play(),
+//   onLeaveBack: () => t11.reverse()
+// })
 
 ScrollTrigger.create ({
   trigger: '.contactText',
@@ -126,6 +126,39 @@ window.onscroll = function () {
   progress.style.height = progressHeight + "%";
 }
 
+$("#toggle").click(function() {
+  $(this).toggleClass('on');
+  $("#resize").toggleClass("active");
+});
+
+$("#resize ul li a").click(function() {
+  $(this).toggleClass('on');
+  $("#resize").toggleClass("active");
+});
+
+$(".close-btn").click(function() {
+  $(this).toggleClass('on');
+  $("#resize").toggleClass("active");
+});
+
+// navigation ends here
+
+// nav animation
+
+TweenMax.from("#brand", 1, {
+  delay: 0.4,
+  y: 10,
+  opacity: 0,
+  ease: Expo.easeInOut
+})
+
+TweenMax.staggerFrom("#menu li a", 1, {
+  delay: 0.4,
+  opacity: 0,
+  ease: Expo.easeInOut
+}, 0.1);
+
+// nav animation ends
 
 
 // Projects animation
