@@ -69,8 +69,8 @@ responsiveLap(y); // Call listener function at run time
 
 ScrollTrigger.create ({
   trigger: '.contactText',
-  start: 'top 60%',
-  end: '+=700',
+  start: 'top 50%',
+  end: '+=200',
   pin: false,
   // toggleActions: 'play none reverse reset',
   onEnter: () => t13.play(),
@@ -303,4 +303,26 @@ ScrollTrigger.create ({
 //   }
 // });
 
-// Skew scroll effect
+// Text Reveal
+
+const textrev = gsap.timeline({paused: true});
+
+textrev.from(".line span", 1.8, {
+  y: 200,
+  ease: "power4.out", 
+  delay: 0,
+  skewY: 10,
+  stagger: {
+    amount: 0.4
+  }
+});
+
+ScrollTrigger.create({
+  trigger: '.wrapper',
+  start: 'top 50%',
+  end: '+=20',
+  pin: true,
+  // toggleActions: 'play none reverse reset',
+  onEnter: () => textrev.play(),
+  onLeaveBack: () => textrev.reverse()
+});
