@@ -827,14 +827,7 @@ h4 {
   text-align: left;
 }
 
-.lastSection {
-  margin-bottom: 10%;
-}
-
 @media (max-width: 1440px) {
-  .lastSection {
-    margin-top: 20% !important;
-  }
   footer h4 {
     font-size: 1vw !important;
   }
@@ -843,9 +836,6 @@ h4 {
 @media (max-width: 1024px) {
   footer h4 {
     font-size: 1.2vw !important;
-  }
-  .lastSection {
-    margin-top: 40% !important;
   }
   .wrapper .line {
     height: 80px !important;
@@ -856,33 +846,21 @@ h4 {
 }
 
 @media (max-width: 768px) {
-  footer {
-    margin-top: 90vh !important;
-  }
   footer h4 {
     font-size: 1.5vw !important;
   }
-  .lastSection {
-    margin-top: 100% !important;
-  }
   .wrapper .line {
-    height: 110px !important;
+    height: 80px !important;
   }
   .wrapper .line span {
-    line-height: 3rem !important;
-    font-size: 7vw !important;
+    line-height: 4rem !important;
+    font-size: 8vw !important;
   }
 }
 
 @media (max-width: 575.98px) {
-  footer {
-    margin-top: 80vh !important;
-  }
   footer h4 {
     font-size: 2.5vw !important;
-  }
-  .lastSection {
-    margin-top: 160% !important;
   }
   .wrapper .line {
     height: 70px !important;
@@ -893,25 +871,19 @@ h4 {
 }
 
 @media (max-width: 425px) {
-  footer {
-    margin-top: 50vh !important;
-  }
   footer h4 {
     font-size: 3vw !important;
-  }
-  .lastSection {
-    margin-top: 200% !important;
   }
   .wrapper .line {
     height: 50px !important;
   }
   .wrapper .line span {
-    font-size: 9vw !important;
+    font-size: 8.4vw !important;
   }
 }
 
 footer {
-  margin-top: 50vh;
+  margin-top: 20vh;
 }
 
 footer h4 {
