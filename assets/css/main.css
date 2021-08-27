@@ -819,10 +819,6 @@ h4 {
   line-height: 8rem !important;
 }
 
-section #projects {
-  margin-bottom: 5%;
-}
-
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -831,6 +827,7 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  margin-top: 10%;
 }
 
 footer h4 {
