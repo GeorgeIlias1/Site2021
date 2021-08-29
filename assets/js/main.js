@@ -116,4 +116,3 @@ ScrollTrigger.create({
   onLeaveBack: () => textrev.reverse()
 });
 
-
