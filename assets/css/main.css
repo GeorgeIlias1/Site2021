@@ -12,6 +12,31 @@ body {
   overflow-x: hidden !important;
 }
 
+.underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5em;
+  left: 0;
+  width: 0;
+  height: .2em;
+  background-color: white;
+  -webkit-transition: width .3s ease;
+  transition: width .3s ease;
+}
+
+.underline:hover {
+  color: #ddd;
+}
+
+.underline:hover::after {
+  width: 100%;
+}
+
 .cursor {
   position: fixed;
   background: white;
@@ -231,7 +256,7 @@ nav #menu li a {
 #resize #menu {
   height: 90px;
   position: absolute;
-  left: 45%;
+  left: 41%;
   -webkit-transform: translateX(-40%);
           transform: translateX(-40%);
   text-align: center;
@@ -277,7 +302,7 @@ nav #menu li a {
     margin-top: 0.6em;
   }
   #menu a {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 300;
   }
   #resize li span {
@@ -314,6 +339,9 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  .cursor, .cursor-follower {
+    display: none !important;
+  }
   .wrap-text {
     padding-left: 4% !important;
   }

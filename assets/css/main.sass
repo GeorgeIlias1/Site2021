@@ -13,6 +13,29 @@ body
   color: $text-color  
   overflow-x: hidden !important
 
+.underline
+  position: relative
+  text-decoration: none
+
+  &::after
+    content: ""
+    position: absolute
+    bottom: -0.5em
+    left: 0
+    width: 0
+    height: .2em
+    background-color: white
+    transition: width .3s ease
+  
+  
+  &:hover
+    color:#ddd
+  
+
+  &:hover::after
+    width: 100%
+  
+
 .cursor 
   position: fixed
   background: white
@@ -213,7 +236,7 @@ nav #menu li a
 #resize #menu 
   height: 90px
   position: absolute
-  left: 45%
+  left: 41%
   transform: translateX(-40%)
   text-align: center
   display: table-cell
@@ -260,7 +283,7 @@ nav #menu li a
       
 
   #menu a 
-    font-size: 20px
+    font-size: 25px
     font-weight: 300
       
 
@@ -298,6 +321,9 @@ h1
     padding-left: 5% !important
 
 @media(max-width: 768px)
+  .cursor, .cursor-follower
+    display: none !important
+
   .wrap-text
     padding-left: 4% !important
 
