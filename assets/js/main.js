@@ -63,12 +63,23 @@ TweenMax.from("#brand", 1, {
   opacity: 0,
   ease: Expo.easeInOut
 })
-
+// 
 TweenMax.staggerFrom("#menu li a", 1, {
   delay: 0.4,
   opacity: 0,
   ease: Expo.easeInOut
 }, 0.1);
+
+var wrapperMenu = document.querySelector('.wrapper-menu');
+
+wrapperMenu.addEventListener('click', function(){
+  wrapperMenu.classList.toggle('open');  
+})
+
+$('#toggle').click(function() {
+  $(this).toggleClass('active');
+  $('#overlay').toggleClass('visible');
+ });
 
 // nav animation ends
 

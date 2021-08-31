@@ -1,6 +1,12 @@
 $text-color: #ffffff
 $font: 'Monument Extended', sans-serif
-$enable-responsive-font-sizes: true
+$color-background: #F5F5F5
+$color-main: #1abc9c
+$color-active: #FFF
+$color-link: #FFF
+
+$button-height: 27px
+$button-width: 35px
 
 *
   cursor: none
@@ -42,7 +48,7 @@ body
   width: 14px
   height: 14px
   border-radius: 100%
-  z-index: 1
+  z-index: 100
   transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity
   user-select: none
   pointer-events: none
@@ -77,10 +83,10 @@ body
 .cursor-follower 
   position: fixed
   background: rgba(255, 255, 255, 0.1)
-  width: 44px
-  height: 44px
+  width: 45px
+  height: 45px
   border-radius: 100%
-  z-index: 1
+  z-index: 100
   transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity
   user-select: none
   pointer-events: none
@@ -155,7 +161,7 @@ nav
   top: 0
 
 
-nav #brand 
+#brand 
   float: left
   margin-top: 2em
   display: block
@@ -164,7 +170,7 @@ nav #brand
   font-weight: bold
 
 
-nav #brand a 
+#brand a 
   color: #fff
   transition: all 0.3s ease-out
   text-decoration: none
@@ -196,77 +202,77 @@ nav #menu li a
   text-decoration: none
 
 
-#toggle 
-  position: absolute
-  right: 6em
-  top: 2em
-  font-weight: 300
-  z-index: 2
-  width: 30px
-  height: 30px
-  cursor: pointer
-  float: right
-  transition: all 0.3s ease-out
-  visibility: hidden
-  opacity: 0
+// #toggle 
+//   position: absolute
+//   right: 6em
+//   top: 2em
+//   font-weight: 300
+//   z-index: 2
+//   width: 30px
+//   height: 30px
+//   cursor: pointer
+//   float: right
+//   transition: all 0.3s ease-out
+//   visibility: hidden
+//   opacity: 0
 
 
-.close-btn 
-  position: absolute
-  right: 16px
-  font-weight: 300
-  z-index: 2
-  cursor: pointer
-  top: -2px
-  line-height: 80px
+// .close-btn 
+//   position: absolute
+//   right: 16px
+//   font-weight: 300
+//   z-index: 2
+//   cursor: pointer
+//   top: -2px
+//   line-height: 80px
 
 
-#resize 
-  z-index: 1
-  top: 0px
-  position: fixed
-  background: #0f0f0f
-  width: 100%
-  height: 100%
-  visibility: hidden
-  opacity: 0
-  transition: all 0.3s ease-out
+// #resize 
+//   z-index: 1
+//   top: 0px
+//   position: fixed
+//   background: #0f0f0f
+//   width: 100%
+//   height: 100%
+//   visibility: hidden
+//   opacity: 0
+//   transition: all 0.3s ease-out
 
 
-#resize #menu 
-  height: 90px
-  position: absolute
-  left: 41%
-  transform: translateX(-40%)
-  text-align: center
-  display: table-cell
-  vertical-align: center
+// #resize #menu 
+//   height: 90px
+//   position: absolute
+//   left: 41%
+//   transform: translateX(-40%)
+//   text-align: center
+//   display: table-cell
+//   vertical-align: center
 
 
-#resize #menu li 
-  display: block
-  text-align: center
-  padding: 10px 0
-  font-size: 50px
-  min-height: 50px
-  font-weight: bold
-  cursor: pointer
-  transition: all 0.3s ease-out
+// #resize #menu li 
+//   display: block
+//   text-align: center
+//   padding: 10px 0
+//   font-size: 50px
+//   min-height: 50px
+//   font-weight: bold
+//   cursor: pointer
+//   transition: all 0.3s ease-out
 
 
-#resize li
-  &:nth-child(1)
-    margin-top: 140px
+// #resize li
+//   &:nth-child(1)
+//     margin-top: 140px
 
 
-#resize #menu li a 
-  color: #fff
-  text-decoration: none
+// #resize #menu li a 
+//   color: #fff
+//   text-decoration: none
 
 
-#resize.active 
-  visibility: visible
-  opacity: 1
+// #resize.active 
+//   visibility: visible
+//   opacity: 1
 
 
 @media(max-width: 768px) 
@@ -277,9 +283,9 @@ nav #menu li a
     margin-right: 4px
       
 
-  nav #brand 
+  #brand 
     margin-left: 24px
-    margin-top: 0.6em
+    margin-top: 1em
       
 
   #menu a 
@@ -293,7 +299,204 @@ nav #menu li a
 
   nav #menu 
     display: none
+
+.wrapper-menu 
+  width: 40px
+  height: 40px
+  display: flex
+  right: 5%
+  top: 50%
+  position: absolute
+  flex-direction: column
+  justify-content: space-between
+  cursor: pointer
+  transition: transform 330ms ease-out
+
+
+.wrapper-menu.open 
+  transform: rotate(-45deg)  
+
+
+.line-menu 
+  background-color: #fff
+  border-radius: 5px
+  width: 100%
+  height: 4px
+
+
+.line-menu.half 
+  width: 50%
+
+
+.line-menu.start 
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57)
+  transform-origin: right
+
+
+.open .line-menu.start 
+  transform: rotate(-90deg) translateX(3px)
+
+
+.line-menu.end 
+  align-self: flex-end
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57)
+  transform-origin: left
+
+
+.open .line-menu.end 
+  transform: rotate(-90deg) translateX(-3px)
+
+.button_container 
+  cursor: pointer
+  z-index: 100
+  
+  &:hover 
+    opacity: .8
+  
+  
+  // &.active 
+  //   .top 
+  //     transform: translateY(11px) translateX(0) rotate(45deg)
+  //     background: $color-active
+    
+  //   .middle 
+  //     opacity: 0
+  //     background: $color-active
+    
+    
+  //   .bottom 
+  //     transform: translateY(-11px) translateX(0) rotate(-45deg)
+  //     background: $color-active
+    
+  
+  
+  // span 
+  // background: $color-main
+  // border: none
+  // height: 5px
+  // width: 100%
+  // position: absolute
+  // top: 0
+  // left: 0
+  // transition:  all .35s ease
+  // cursor: pointer
+    
+  //   &:nth-of-type(2) 
+  //     top: 11px
+    
+    
+  //   &:nth-of-type(3) 
+  //     top: 22px
+    
+  
+
+
+.overlay 
+  position: fixed
+  background: rgba(0,0,0,1)
+  backdrop-filter: blur(16px)
+  top: 0
+  left: 0
+  width: 100%
+  height: 0%
+  opacity: 0
+  visibility: hidden
+  transition: opacity .35s, visibility .35s, height .35s
+  overflow: hidden
+  
+  &.visible 
+    opacity: .9
+    visibility: visible
+    height: 100%
+    
+    li 
+      animation: fadeInRight .5s ease forwards
+      animation-delay: .35s
       
+      &:nth-of-type(2) 
+        animation-delay: .4s
+      
+      &:nth-of-type(3) 
+        animation-delay: .45s
+      
+      &:nth-of-type(4) 
+        animation-delay: .50s
+
+      &:nth-of-type(5) 
+        animation-delay: .55s
+
+      &:nth-of-type(6) 
+        animation-delay: .60s
+      
+    
+  
+  nav 
+    position: relative
+    height: 30%
+    top: 40%
+    display: flex
+    transform: translateY(-50%)
+    font-size: 30px
+    font-weight: 400
+    text-align: right
+    float: right
+  
+  ul 
+    list-style: none
+    padding: 0
+    margin: 0 auto
+    display: inline-block
+    position: absolute
+    height: 100% 
+    right: 5%    
+    li 
+      display: block
+      height: 25%
+      height: calc(100% / 4)
+      min-height: 50px
+      position: relative
+      opacity: 0
+      
+      a 
+        display: block
+        position: relative
+        color: $color-link
+        float: right
+        text-decoration: none
+        overflow: hidden
+        
+        &:hover:after,
+         &:focus:after,
+         &:active:after 
+           width: 100%
+         
+        
+        &:after 
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 50%
+          width: 0%
+          transform: translateX(-50%)
+          height: 3px
+          background: $color-link
+          transition: .35s
+        
+      
+    
+  
+
+
+@keyframes fadeInRight 
+  0% 
+    opacity: 0
+    left: 20%
+  
+  100% 
+    opacity: 1
+    left: 0
+  
+ 
 
 
 @media(min-width: 768px) 
@@ -434,7 +637,7 @@ section
   left: -50%
   top: -50%
   width: 200%
-  opacity: 0.8
+  opacity: 0.6
   z-index: 99
 
 @keyframes movie 
