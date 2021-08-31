@@ -332,7 +332,7 @@ nav #menu li a {
 }
 
 .overlay.visible {
-  opacity: .9;
+  opacity: .95;
   visibility: visible;
   height: 100%;
 }
