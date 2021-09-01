@@ -205,7 +205,7 @@ nav #menu {
 nav #menu li {
   padding-left: 40px;
   display: inline-block;
-  cursor: pointer;
+  cursor: none;
   font-weight: 300;
   line-height: 80px;
   position: relative;
@@ -261,7 +261,7 @@ nav #menu li a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  cursor: pointer;
+  cursor: none;
   -webkit-transition: -webkit-transform 330ms ease-out;
   transition: -webkit-transform 330ms ease-out;
   transition: transform 330ms ease-out;
@@ -315,7 +315,7 @@ nav #menu li a {
 }
 
 .button_container {
-  cursor: pointer;
+  cursor: none;
   z-index: 100;
 }
 
