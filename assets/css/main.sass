@@ -145,13 +145,21 @@ body
   background: rgba(255, 255, 255, 0.1)
 
 // Navigation 
+
+.header
+  position: fixed
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(22, 22, 22, 0)))
+  background: -webkit-linear-gradient(top, #000, rgba(22, 22, 22, 0))
+  background: -o-linear-gradient(top, #000, rgba(22, 22, 22, 0))
+  background: linear-gradient(180deg, #000, rgba(22, 22, 22, 0))
+  z-index: 1
+  height: 80
+  width: 100%
+  top: 0
   
 nav 
   width: 100%
-  // background: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(22, 22, 22, 0)))
-  // background: -webkit-linear-gradient(top, #000, rgba(22, 22, 22, 0))
-  // background: -o-linear-gradient(top, #000, rgba(22, 22, 22, 0))
-  // background: linear-gradient(180deg, #000, rgba(22, 22, 22, 0))
+  
   -webkit-transition: 0-.6s ease-in
   -o-transition: 0-.6s ease-in
   transition: 0-.6s ease-in
@@ -395,6 +403,8 @@ nav #menu li a
   position: fixed
   background: rgba(0,0,0,.8)
   backdrop-filter: blur(16px)
+  -webkit-backdrop-filter: blur(16px)
+  -moz-backdrop-filter: blur(16px)
   top: 0
   left: 0
   width: 100%
@@ -405,7 +415,7 @@ nav #menu li a
   overflow: hidden
   
   &.visible 
-    opacity: .95
+    opacity: .99
     visibility: visible
     height: 100%
     
