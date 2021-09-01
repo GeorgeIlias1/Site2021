@@ -21,12 +21,14 @@ $(document).ready(function() {
 
 // Text Reveal Glitch
 const text = baffle(".data");
-  text.set({
-        characters : '█▓█ ▒░/▒░ █░▒▓/ █▒▒ ▓▒▓/█ ░█▒/ ▒▓░ █<░▒ ▓/░>',
-        speed: 120
-  });
-  text.start();
-  text.reveal(4000);
+text.set({
+      characters : '█▓█ ▒░/▒░ █░▒▓/ █▒▒ ▓▒▓/█ ░█▒/ ▒▓░ █<░▒ ▓/░>',
+      speed: 120
+});
+text.start();
+text.reveal(4000);
+
+
 
 
 // Scrollbar Custom
@@ -79,9 +81,13 @@ wrapperMenu.addEventListener('click', function(){
 $('#toggle').click(function() {
   $(this).toggleClass('active');
   $('#overlay').toggleClass('visible');
- });
+});
+
+
 
 // nav animation ends
+
+
 
 
 // Projects animation

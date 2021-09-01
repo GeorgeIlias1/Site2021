@@ -393,7 +393,7 @@ nav #menu li a
 
 .overlay 
   position: fixed
-  background: rgba(0,0,0,1)
+  background: rgba(0,0,0,.8)
   backdrop-filter: blur(16px)
   top: 0
   left: 0
@@ -469,18 +469,6 @@ nav #menu li a
          &:focus:after,
          &:active:after 
            width: 100%
-         
-        
-        &:after 
-          content: ''
-          position: absolute
-          bottom: 0
-          left: 50%
-          width: 0%
-          transform: translateX(-50%)
-          height: 3px
-          background: $color-link
-          transition: .35s
         
       
     
@@ -627,42 +615,42 @@ section
   justify-content: flex-end
 
 // Background Animation 
-#movie-bg 
-  position: fixed
-  pointer-events: none
-  -webkit-animation: movie 1s steps(4) infinite
-  animation: movie 1s steps(4) infinite
-  background-image: url(/images/movie.png)
-  height: 200%
-  left: -50%
-  top: -50%
-  width: 200%
-  opacity: 0.6
-  z-index: 99
+// #movie-bg 
+//   position: fixed
+//   pointer-events: none
+//   -webkit-animation: movie 1s steps(4) infinite
+//   animation: movie 1s steps(4) infinite
+//   background-image: url(/images/movie.png)
+//   height: 200%
+//   left: -50%
+//   top: -50%
+//   width: 200%
+//   opacity: 0.6
+//   z-index: 99
 
-@keyframes movie 
- 0%
-   transform: translate(0, 0)
- 10%
-   transform: translate(-5%, -5%)
- 20% 
-   transform: translate(-10%, -5%)
- 30%
-   transform: translate(5%, -10%)
- 40%
-   transform: translate(-5%, -15%)
- 50%
-   transform: translate(-10%, 5%)
- 60%
-   transform: translate(-15%, 0)
- 70%
-   transform: translate(0, 10%)
- 80%
-   transform: translate(-15%, 0)
- 90%
-   transform: translate(10%, 5%)
- 100%
-   transform: translate(5%, 0)
+// @keyframes movie 
+//  0%
+//    transform: translate(0, 0)
+//  10%
+//    transform: translate(-5%, -5%)
+//  20% 
+//    transform: translate(-10%, -5%)
+//  30%
+//    transform: translate(5%, -10%)
+//  40%
+//    transform: translate(-5%, -15%)
+//  50%
+//    transform: translate(-10%, 5%)
+//  60%
+//    transform: translate(-15%, 0)
+//  70%
+//    transform: translate(0, 10%)
+//  80%
+//    transform: translate(-15%, 0)
+//  90%
+//    transform: translate(10%, 5%)
+//  100%
+//    transform: translate(5%, 0)
 
 // Projects Section
 // .container-fluid 
