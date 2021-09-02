@@ -424,7 +424,7 @@ nav #menu li a
 
 .overlay 
   position: fixed
-  background: rgba(0,0,0,.8)
+  background: rgba(0,0,0,0.8)
   backdrop-filter: blur(16px)
   -webkit-backdrop-filter: blur(16px)
   -moz-backdrop-filter: blur(16px)
@@ -433,12 +433,12 @@ nav #menu li a
   width: 100%
   height: 0%
   opacity: 0
-  visibility: hidden
+  // visibility: hidden
   transition: opacity .35s, visibility .35s, height .35s
-  overflow: hidden
+  // overflow: hidden
   
   &.visible 
-    opacity: .99
+    opacity: 1
     visibility: visible
     height: 100%
     
