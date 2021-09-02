@@ -351,10 +351,10 @@ nav #menu li a {
 
 .overlay {
   position: fixed;
-  background: rgba(0, 0, 0, 0.8);
   -webkit-backdrop-filter: blur(16px);
   -moz-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
+  background: rgba(0, 0, 0, 0.8);
   top: 0;
   left: 0;
   width: 100%;
@@ -364,7 +364,7 @@ nav #menu li a {
   -webkit-transition: opacity .35s, visibility .35s, height .35s;
   transition: opacity .35s, visibility .35s, height .35s;
   overflow: hidden;
-  z-index: 60;
+  z-index: 99;
 }
 
 .overlay.visible {
