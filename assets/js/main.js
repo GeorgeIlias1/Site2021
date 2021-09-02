@@ -189,16 +189,14 @@ $(".hoverEffect1").on("mouseleave", function () {
   follower.removeClass("active");
 });
 
-var overlay = document.getElementsByClassName('overlay');
 
-function myFunction(x) {
+function blur(x) {
   if (x.matches) { // If media query matches
-    overlay.style.backgroundColor = "yellow";
+    document.querySelector('.overlay').style.backgroundColor = "rgba(0, 0, 0, 0.95)";
   } else {
-    overlay.style.backgroundColor = "pink";
+    document.querySelector('.overlay').style.backgroundColor = "rgba(0, 0, 0, 0.8)";
   }
 }
 
-var x = window.matchMedia("(max-width: 768px)")
-myFunction(x) // Call listener function at run time
-x.addListener(myFunction)
+var x = window.matchMedia("(max-width: 768px)");
+blur(x);

@@ -352,7 +352,6 @@ nav #menu li a {
 .overlay {
   position: fixed;
   -webkit-backdrop-filter: blur(16px);
-  -moz-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   background: rgba(0, 0, 0, 0.8);
   top: 0;
