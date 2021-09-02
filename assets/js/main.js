@@ -169,12 +169,22 @@ $(document).on("mousemove", function (e) {
   mouseY = e.clientY;
 });
 
-$(".project").on("mouseenter", function () {
+$(".hoverEffect").on("mouseenter", function () {
   cursor.addClass("active");
   follower.addClass("active");
 });
 
-$(".project").on("mouseleave", function () {
+$(".hoverEffect").on("mouseleave", function () {
   cursor.removeClass("active");
+  follower.removeClass("active");
+});
+
+$(".hoverEffect1").on("mouseenter", function () {
+  cursor.addClass("active1");
+  follower.addClass("active");
+});
+
+$(".hoverEffect1").on("mouseleave", function () {
+  cursor.removeClass("active1");
   follower.removeClass("active");
 });
