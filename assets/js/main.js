@@ -188,3 +188,17 @@ $(".hoverEffect1").on("mouseleave", function () {
   cursor.removeClass("active1");
   follower.removeClass("active");
 });
+
+var overlay = document.getElementsByClassName('overlay');
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    overlay.style.backgroundColor = "yellow";
+  } else {
+    overlay.style.backgroundColor = "pink";
+  }
+}
+
+var x = window.matchMedia("(max-width: 768px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction)
