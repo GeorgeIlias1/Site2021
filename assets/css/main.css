@@ -519,6 +519,23 @@ section {
   height: 100vh;
 }
 
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 1%;
+}
+
+.iconLink {
+  text-decoration: none;
+  border-bottom: 2px solid rgba(64, 64, 64, 0.9);
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+.iconLink:hover {
+  border-bottom: 2px solid rgba(245, 0, 0, 0.9);
+}
+
 #contact {
   margin-top: 100% !important;
 }
