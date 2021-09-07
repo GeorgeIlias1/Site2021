@@ -29,8 +29,6 @@ text.start();
 text.reveal(4000);
 
 
-
-
 // Scrollbar Custom
 let progress = document.getElementById('progressbar');
 let totalHeight = document.body.scrollHeight - window.innerHeight;

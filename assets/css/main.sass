@@ -31,6 +31,7 @@ body
   font-family: $font
   color: $text-color  
   overflow-x: hidden !important
+  cursor: none
 
 .underline
   position: relative
@@ -848,7 +849,7 @@ h4
     bottom: 0
 
 .project2
-  background: url(/images/ProjectsHellasWeb/lecharme.png) no-repeat 50% 50%
+  background: url(/images/ProjectsHellasWeb/lecharme.png) no-repeat 50% 0%
   background-size: cover 
 
 .project2
@@ -880,8 +881,9 @@ h4
     bottom: 3
 
 .project5
-  background: url(/images/ProjectsHellasWeb/barbarossa.png) no-repeat 50% 50%
+  background: url(/images/ProjectsHellasWeb/barbarossa.png) no-repeat 50% 0%
   background-size: cover 
+
 
 .project5
   &::after
@@ -912,7 +914,7 @@ h4
     bottom: 0
 
 .project7
-  background: url(/images/ProjectsHellasWeb/renata.png) no-repeat 50% 50%
+  background: url(/images/ProjectsHellasWeb/renata.png) no-repeat 50% 0%
   background-size: cover 
 
 .project7
@@ -944,7 +946,7 @@ h4
     bottom: 3
 
 .project9
-  background: url(/images/ProjectsHellasWeb/kandylis.png) no-repeat 50% 50%
+  background: url(/images/ProjectsHellasWeb/kandylis.png) no-repeat 50% 60%
   background-size: cover 
 
 .project9
@@ -1005,12 +1007,56 @@ h4
 // About page
 
 .about 
-  height: 500px
-  margin-top: 120px
+  height: 600px
+  // margin-top: 120px
 
 .image
-  background: url(/images/Untitled-1.png) no-repeat 50% 50%
-  background-size: cover
+  background: url(/images/profile1.png) no-repeat 50% 50%
+  background-size: contain
+
+[data-char] 
+  color: transparent
+  position: relative
+
+[data-char]:after 
+  --txt: attr(data-char)
+  animation-duration: 0.2s
+  animation-delay: 0.5s
+  animation-timing-function: steps(1)
+  animation-fill-mode: backwards
+  content: var(--txt)
+  color: var(--color)
+  position: absolute
+  left: 0
+  top: 0
+
+@keyframes glitch-switch 
+  0%  
+    content: var(--char-0) 
+  10%  
+    content: var(--char-1) 
+  20%  
+    content: var(--char-2) 
+  30%  
+    content: var(--char-3) 
+  40%  
+    content: var(--char-4) 
+  50%  
+    content: var(--char-5) 
+  60%  
+    content: var(--char-6) 
+  70%  
+    content: var(--char-7) 
+  80%  
+    content: var(--char-8) 
+  90%  
+    content: var(--char-9) 
+  100%  
+    content: var(--char-0) 
+
+.reveal-1 [data-char]:after
+  animation-iteration-count calc(var(--char-index) * 0.55)
+
 
 
 // Last Section
