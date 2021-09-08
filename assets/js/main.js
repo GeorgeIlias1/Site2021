@@ -28,6 +28,71 @@ text.set({
 text.start();
 text.reveal(4000);
 
+// let t15 = gsap.timeline ({paused: true});
+
+// ScrollTrigger.create ({
+//   trigger: 'h3',
+//   toggleClass: 'data',
+//   start: 'bottom 80%',
+//   end: '+=',
+//   // toggleActions: 'play none reverse reset',
+//   onEnter: () => text.start(),
+//   onEnter: () => text.reveal(4000),
+//   onLeaveBack: () => t15.reverse()
+// })
+
+// var headers = gsap.utils.toArray('h3');
+
+// headers.forEach((h3) => {
+  
+//   gsap.to(h3, {
+//     scrollTrigger: {
+//       trigger: h3,
+//       toggleClass: 'data',
+//       start: 'bottom 100%',
+//       end: '+=50',
+//       onEnter: () => text.start(),
+//       onEnter: () => text.reveal(5000)
+//     }
+// });
+  
+// })
+
+// var headers1 = gsap.utils.toArray('h6');
+
+// headers1.forEach((h6) => {
+  
+//   gsap.to(h6, {
+//     scrollTrigger: {
+//         trigger: h6,
+//         toggleClass: 'data',
+//         start: 'bottom 100%',
+//         end: '+=50',
+//         onEnter: () => text.start(),
+//         onEnter: () => text.reveal(4000)
+//     }
+// });
+  
+// })
+
+// var headers0 = gsap.utils.toArray('h1');
+
+// headers0.forEach((h1) => {
+  
+//   gsap.to(h1, {
+//     scrollTrigger: {
+//         trigger: h1,
+//         toggleClass: 'data',
+//         start: 'bottom 100%',
+//         end: '+=50',
+//         onEnter: () => text.start(),
+//         onEnter: () => text.reveal(4000)
+//     }
+// });
+  
+// })
+
+
 
 // Scrollbar Custom
 let progress = document.getElementById('progressbar');
@@ -90,22 +155,22 @@ $('#toggle').click(function() {
 
 // Projects animation
 
-let t12 = gsap.timeline ({paused: true});
+// let t12 = gsap.timeline ({paused: true});
 
 
-t12.to('#txtReveal', {y: '0%', duration: 0.5, stagger: 0.2});
+// t12.to('#txtReveal', {y: '0%', duration: 0.5, stagger: 0.2});
 
-t12.to('.line', {duration: 0.5, x: '0'});
+// t12.to('.line', {duration: 0.5, x: '0'});
 
-ScrollTrigger.create ({
-  trigger: '.paragraphAbout',
-  start: 'bottom 80%',
-  end: '+=50',
-  pin: true,
-  // toggleActions: 'play none reverse reset',
-  onEnter: () => t12.play(),
-  onLeaveBack: () => t12.reverse()
-})
+// ScrollTrigger.create ({
+//   trigger: '.paragraphAbout',
+//   start: 'bottom 80%',
+//   end: '+=50',
+//   pin: true,
+//   // toggleActions: 'play none reverse reset',
+//   onEnter: () => t12.play(),
+//   onLeaveBack: () => t12.reverse()
+// })
 
 // Text Reveal
 
