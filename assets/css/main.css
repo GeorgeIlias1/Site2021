@@ -202,8 +202,8 @@ body {
 
 .header {
   position: fixed;
-  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(22, 22, 22, 0)));
-  background: linear-gradient(180deg, #000, rgba(22, 22, 22, 0));
+  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(rgba(0, 0, 0, 0.1)));
+  background: linear-gradient(180deg, #000, rgba(0, 0, 0, 0.1));
   z-index: 1;
   height: 70px;
   width: 100%;
