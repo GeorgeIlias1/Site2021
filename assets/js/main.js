@@ -26,31 +26,19 @@ text.set({
       speed: 120
 });
 text.start();
-text.reveal(4000);
-
-// let t15 = gsap.timeline ({paused: true});
-
-// ScrollTrigger.create ({
-//   trigger: 'h3',
-//   toggleClass: 'data',
-//   start: 'bottom 80%',
-//   end: '+=',
-//   // toggleActions: 'play none reverse reset',
-//   onEnter: () => text.start(),
-//   onEnter: () => text.reveal(4000),
-//   onLeaveBack: () => t15.reverse()
-// })
+text.reveal(5000);
 
 // var headers = gsap.utils.toArray('h3');
 
-// headers.forEach((h3) => {
+// headers.forEach((h3, i) => {
   
-//   gsap.to(h3, {
+//   gsap.to(h3[i], {
 //     scrollTrigger: {
 //       trigger: h3,
-//       toggleClass: 'data',
+//       toogleClass: 'data',
 //       start: 'bottom 100%',
 //       end: '+=50',
+//       scrub: true,
 //       onEnter: () => text.start(),
 //       onEnter: () => text.reveal(5000)
 //     }
