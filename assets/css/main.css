@@ -27,6 +27,10 @@ body {
   cursor: none;
 }
 
+html, body {
+  scrollbar-width: none;
+}
+
 .underline {
   position: relative;
   text-decoration: none;
