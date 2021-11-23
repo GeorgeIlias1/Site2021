@@ -742,9 +742,9 @@ h6 {
   color: #ffffff;
   display: block;
   top: 80%;
-  left: -50%;
+  left: 90%;
   right: 0;
-  bottom: 3;
+  bottom: 0;
 }
 
 .project4 {
@@ -843,9 +843,9 @@ h4 {
   color: #ffffff;
   display: block;
   top: 80%;
-  left: -50%;
+  left: 90%;
   right: 0;
-  bottom: 3;
+  bottom: 0;
 }
 
 .project5 {
@@ -965,6 +965,23 @@ h4 {
   left: -60%;
   right: 0;
   bottom: 0;
+}
+
+.project12 {
+  background: url(/images/ProjectsHellasWeb/diadent.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.project12::after {
+  content: "diadent lab.";
+  font-size: 35px;
+  position: relative;
+  color: #ffffff;
+  display: block;
+  top: 80%;
+  left: -50%;
+  right: 0;
+  bottom: 3;
 }
 
 @media (max-width: 768px) {
