@@ -769,7 +769,7 @@ h6 {
     width: 90% !important;
     margin: 14px auto;
   }
-  .project1::after, .project2::after, .project3::after, .project4::after, .project5::after, .project6::after, .project7::after, .project8::after, .project9::after, .project10::after, .project11::after {
+  .project1::after, .project2::after, .project3::after, .project4::after, .project5::after, .project6::after, .project7::after, .project8::after, .project9::after, .project10::after, .project11::after, .project12::after {
     display: none !important;
   }
 }
